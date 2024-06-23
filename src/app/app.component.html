@@ -6,6 +6,16 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>sample</h1>
+  <h1>Parent Component</h1>
+  <!-- <app-child [amount] = "price"></app-child> -->
+   <ul>
+    <li *ngFor="let item of items">{{item}}</li>
+    <app-child (userEnterVal)="valueFromChild($event)"></app-child>
+   </ul>
+
+   <br>
+   <br>
+   <app-child3 (valuefromchild) = "valuefromchild3($event)"></app-child3>
+   <app-child2 [recevingval] = "valuefromchild"></app-child2>
 </body>
 </html>
